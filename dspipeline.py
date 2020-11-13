@@ -11,7 +11,8 @@ Description:
     model a freely available dataset
 
 Usage:
-    <usage>
+    import dspipeline
+    dspipeline.adult_data_demo()
 
 """
 
@@ -127,7 +128,7 @@ def cross_validate_scores(pipelines, X, y, cv=None):
         warnings.filterwarnings('ignore', category=UserWarning)
         warnings.filterwarnings('ignore', category=ConvergenceWarning)
         warnings.filterwarnings('ignore', category=FutureWarning)
-        
+
         cv = cv or my_cv()
 
         dfscores = pd.DataFrame()
